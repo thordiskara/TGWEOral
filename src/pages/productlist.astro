@@ -1,0 +1,107 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+import BurgerMenu from "../components/BurgerMenu.astro"
+import RedWineCard from "../components/RedWineCard.astro"
+import WhiteWineCard from "../components/WhiteWineCard.astro"
+import SparklingWineCard from "../components/SparklingWineCard.astro"
+import RoseWineCard from "../components/RoseWineCard.astro"
+import Filters from "../components/Filters.astro"
+import MobileFilter from "../components/MobileFilter.astro"
+import FilterIcon from "../svg/icons/filters.svg"
+import Sort from "../components/Sort.astro"
+import Button1 from "../components/Button1.astro"
+---
+
+<Layout>
+    <Header/>
+    <MobileFilter/>
+    <!-- breadcrumbs -->
+    <div class="flex flex-wrap gap-breadcrumbs-gap px-breadcrumbs-x py-breadcrumbs-y">
+        <a href="#" class="overlineText">Shop</a>
+        <p class="overlineText">/</p>
+        <a href="#" class="overlineText border-b border-black">All wines</a>
+    </div>
+
+    <div class="sm:flex justify-end px-body-padding-x py-space-m hidden">
+        <Sort/>
+    </div>
+    <div class="sm:hidden flex justify-between px-body-padding-x py-space-m ">
+        <div class="filters flex gap-space-m items-start">
+            <img class="w-[1.5rem]"src={FilterIcon} alt="filter"/>
+            <h6>Filters</h6>
+        </div>
+        <div>
+            <Sort/>
+        </div>
+    </div>
+    <div class="w-full sm:grid sm:grid-cols-productlist flex justify-center">
+        <aside class="hidden sm:block pl-space-l">
+            <Filters/>
+        </aside>
+        <div class="sm:flex sm:flex-wrap gap-[8px] grid grid-cols-2 px-body-padding-x md:px-space-xl justify-center">
+            <div class="france flex flex-col md:w-[16rem] h-auto min-h-[7%] justify-end p-productcard-p">
+                <h4 class="text-white">French <br> wines</h4>
+            </div>
+            <RedWineCard/>
+            <WhiteWineCard/>
+            <SparklingWineCard/>
+            <RoseWineCard/>
+            <WhiteWineCard/>
+            <div class="italy flex flex-col md:w-[16rem] h-auto min-h-[7%]  justify-end p-productcard-p">
+                <h4 class="text-white">Italian <br> wines</h4>
+            </div>
+            <RedWineCard/>
+            <SparklingWineCard/>
+            <RoseWineCard/>
+            <SparklingWineCard/>
+            <RedWineCard/>
+            <div class="spain flex flex-col md:w-[16rem] h-auto min-h-[7%]  justify-end p-productcard-p">
+                <h4 class="text-white">Spanish <br> wines</h4>
+            </div>
+            <RoseWineCard/>
+            <WhiteWineCard/>
+            <RedWineCard/>
+        </div>
+    </div>
+    <div class="flex justify-center py-space-xl"><Button1 text="Load More" link="#"  /></div>
+    <Footer/>
+    <BurgerMenu/>
+</Layout>
+
+<style>
+     .france{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), url("../img/productlist/french.webp");
+ }
+ .italy{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), url("../img/productlist/italy.webp");
+ }
+ .spain{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), url("../img/productlist/spain.webp");
+ }
+</style>
+
+<script is:inline>
+
+    document.addEventListener("DOMContentLoaded", init)
+    
+    function init(){
+        console.log("hee")
+        document.querySelector('.filters').addEventListener('click', () => {
+            document.querySelector('.filterbox').classList.remove('hidden');
+        document.querySelector('.leave').addEventListener('click', () => {
+                document.querySelector('.filterbox').classList.add('hidden');
+              })
+          });
+      }   
+        </script>

@@ -1,0 +1,35 @@
+---
+import WhiteWine from '../img/white.webp'
+import CornerArrow from '../svg/icons/corner-arrow.svg'
+---
+
+
+<a class="bg-product-list sm:w-[16rem]" href="/whitewine/">
+    <div class="flex flex-col justify-between p-productcard-p gap-[1rem]">
+    <div class="flex flex-col items-end align-right md:pl-[2rem]">
+        <h6 class="text-right">Galia Villages 2014</h6>
+        <p class="bodySmall">White, France</p>
+    </div>
+    <div class="w-full flex justify-center">
+        <img class=" h-[8rem] md:h-[14rem] object-contain" src={WhiteWine} alt="white wine"/>
+    </div>
+    <div class="flex justify-between">
+        <div>
+            <p class="bodySmall">75 cl</p>
+            <p class="bodySmall">165 DKK</p>
+        </div>
+        <div class="flex justify-end w-[20%]"><img class="arrow" src={CornerArrow} alt="corner arrow"/></div>
+    </div>
+    </div>
+</a>
+
+<style>
+    a:hover {
+        background-color: var(--white-wine-card-hover);
+    }
+
+    a:hover .arrow{
+        rotate: -45deg;
+        transition: 300ms ease-in-out;
+    }
+</style>
