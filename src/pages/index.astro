@@ -62,7 +62,7 @@ import SparklingWineCard from "../components/SparklingWineCard.astro"
     </div>
     <div class="wineTright row-span-2 col-start-3"></div>
     <div class="col-span-2 row-start-2 row-span-2 flex">
-        <img src={WineTLeft} alt="" class="w-[25vw] object-cover">
+        <img src={WineTLeft} alt="Glass of wine" class="w-[25vw] object-cover">
         <div class="flex flex-col pb-landing-padding-y">
             <p class="px-body-padding-x pb-padding-paragraphs">At The Great Wine Experience we offer a variety of different wine tastings led by Sommelier Natalie Noryd. 
                 We create a fun and highly informative experience for our customers that match their requirements as well as their budget.</p>
@@ -73,8 +73,8 @@ import SparklingWineCard from "../components/SparklingWineCard.astro"
     </div>
 </section>
 <!-- Product section -->
-<section class="py-landing-padding-y px-body-padding-x lg:px-space-xl border-b-2 border-line-checkout grid justify-center gap-[8px]">
-    <div class=" gap-[8px] justify-center grid grid-cols-2 lg:grid-cols-5">
+<section class="py-landing-padding-y px-body-padding-x lg:px-space-xl border-b-2 border-line-checkout grid justify-center">
+    <div class="gap-[8px] justify-center grid grid-cols-2 lg:grid-cols-5">
          <RedWineCard  />
         <div class="bg-burger-blue flex flex-col lg:w-[16rem] h-auto min-h-[7%] justify-end p-productcard-p">
             <h4>Top <br> Products</h4>
@@ -116,11 +116,11 @@ import SparklingWineCard from "../components/SparklingWineCard.astro"
                 <h2 class="text-center justify-self-center mx-16">Join our wine club</h2>
             <div class="py-landing-padding-y flex flex-col gap-space-l">
                     <div class="flex flex-col gap-space-3xs">
-                        <label for="full name"><h6>name</h6></label>
-                        <input type="text" name="full name" placeholder="Please enter your full name" required class="border border-display-blue p-space-xs text-body-small">
+                        <label for="fullname"><p>Full Name</p></label>
+                        <input type="text" name="fullname" placeholder="Please enter your full name" required class="border border-display-blue p-space-xs text-body-small">
                     </div>
                     <div class="flex flex-col gap-space-3xs">
-                        <label for="email"><h6>Email</h6></label>
+                        <label for="email"><p>Email</p></label>
                         <input type="text" name="email" placeholder="example@mail.com" required class="border border-display-blue p-space-xs text-body-small">
                     </div>
             </div>
