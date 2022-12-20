@@ -41,14 +41,14 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
   </header>
   <div>
     <section
-      class="px-body-padding-x lg:pt-body-padding-y lg:grid lg:grid-cols-3"
+      class="px-body-padding-x md:pt-body-padding-y md:grid md:grid-cols-3"
     >
-      <h3 class="border-b-2 border-line-checkout pb-2 lg:col-span-3">
+      <h1 class="border-b-2 border-line-checkout pb-2 md:col-span-3">
         checkout
-      </h3>
+      </h1>
 
-      <aside class="lg:col-start-3 lg:pl-10">
-        <h5 class="pt-space-m-l pb-space-review-order lg:pt-space-xl lg:pb-1">
+      <aside class="md:col-start-3 lg:pl-10 md:pl-space-xs">
+        <h5 class="pt-space-m-l pb-space-review-order md:pt-space-xl md:pb-1">
           order summary
         </h5>
         <div
@@ -73,7 +73,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
         </div>
         <p>INC. TAX</p>
       </aside>
-      <div class="lg:col-span-2 lg:row-start-2">
+      <div class="md:col-span-2 md:row-start-2">
         <div
           class="details flex justify-between border-b-2 border-line-checkout"
         >
@@ -89,9 +89,9 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
           onsubmit="signup(event)"
         >
           <div class="grid">
-            <div class="lg:grid lg:grid-cols-2 gap-4">
+            <div class="md:grid md:grid-cols-2 gap-4">
               <div class="flex flex-col">
-                <label for="Fname"> First Name*</label>
+                <label for="Fname"> First name*</label>
                 <input
                   type="text"
                   name="firstname"
@@ -100,7 +100,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
                 />
               </div>
               <div class="flex flex-col">
-                <label for="Lname"> last Name*</label>
+                <label for="Lname"> Last name*</label>
                 <input
                   type="text"
                   name="lastname"
@@ -109,32 +109,44 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
                 />
               </div>
             </div>
-            <div class="lg:grid lg:grid-cols-2 lg:gap-4">
-              <div class="flex flex-col">
-                <label for="email"> e-mail*</label>
-                <input
-                  type="text"
-                  name="email"
-                  placeholder="example@email.dk"
-                  required
-                />
-              </div>
-              <div class="flex flex-col">
-                <label for="phone">phone (optional)</label>
-                <input type="tel" name="phone" placeholder="+45 00 00 00" />
-              </div>
+
+            <div class="flex flex-col">
+              <label for="email"> E-mail*</label>
+              <input
+                type="text"
+                name="email"
+                placeholder="Example@email.dk"
+                required
+                class="lg:w-[50%]"
+              />
             </div>
-            <label for="address">address*</label>
-            <input type="text" name="adress" placeholder="Home address" />
-            <label for="address"> second address (optional)</label>
+            <div class="flex flex-col">
+              <label for="phone">Phone (optional)</label>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="+45 00 00 00"
+                class="lg:w-[50%]"
+              />
+            </div>
+
+            <label for="address">Address*</label>
+            <input
+              type="text"
+              name="adress"
+              placeholder="Home address"
+              class="lg:w-[50%]"
+            />
+            <label for="address"> Second address (optional)</label>
             <input
               type="text"
               name="adress"
               placeholder="Floor, Apartment, etc."
+              class="lg:w-[50%]"
             />
-            <div class="lg:grid lg:grid-cols-2 lg:gap-4">
+            <div class="md:grid md:grid-cols-2 md:gap-4">
               <div class="flex flex-col">
-                <label for="city">city*</label>
+                <label for="city">City*</label>
                 <input
                   type="text"
                   name="city"
@@ -153,27 +165,39 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
                 />
               </div>
             </div>
-            <label for="region">Region*</label>
-            <input
-              type="text"
-              name="region"
-              placeholder="Please enter your region"
-            />
-
-            <label for="country">Country</label>
-            <input type="text" name="country" disabled placeholder="Denmark" />
-            <p class="pt-space-3xs">(We only ship within Denmark)</p>
+            <div class="md:grid md:grid-cols-2 md:gap-4">
+              <div class="flex flex-col">
+                <label for="region">Region*</label>
+                <input
+                  type="text"
+                  name="region"
+                  placeholder="Please enter your region"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label for="country">Country</label>
+                <input
+                  type="text"
+                  name="country"
+                  disabled
+                  placeholder="Denmark"
+                />
+                <p class="pt-space-3xs text-display-blue">
+                  (We only ship within Denmark)
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="grid place-content-center lg:place-content-start">
+          <div class="grid place-content-center md:place-content-start">
             <input type="submit" value="Continue" class="btn continue-one" />
           </div>
         </form>
       </div>
     </section>
 
-    <section class="px-body-padding-x lg:grid lg:grid-cols-3">
+    <section class="px-body-padding-x md:grid md:grid-cols-3">
       <div
-        class="details flex justify-between border-b-2 border-line-checkout lg:col-span-2"
+        class="details flex justify-between border-b-2 border-line-checkout md:col-span-2"
       >
         <h4 class="">2. payment</h4>
         <img class="plus2 cursor-pointer" src={Plus} alt="plus" />
@@ -182,7 +206,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
       <form
         action=""
         autocomplete="on"
-        class="payment hidden px-body-padding-x lg:col-span-2 lg:px-20"
+        class="payment hidden px-body-padding-x md:col-span-2 md:px-20"
       >
         <div class="grid">
           <label for="card">Card number*</label>
@@ -194,8 +218,9 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             pattern="[0-9\s]{13,19}"
             placeholder="XXXX XXXX XXXX XXXX"
             required
+            class="lg:w-[60%]"
           />
-          <label for="expdate">exp. date*</label>
+          <label for="expdate">Exp. date*</label>
           <div class="exp-wrapper">
             <input
               autocomplete="off"
@@ -231,17 +256,22 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             required
             class="w-[60%] lg:w-[40%]"
           />
-          <label for="name">name on card*</label>
-          <input type="text" name="name" placeholder="Enter cardholder name" />
+          <label for="name">Name on card*</label>
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter cardholder name"
+            class="lg:w-[60%]"
+          />
           <div class="flex pt-space-xs">
             <p class="text-form-inputandlabel pl-space-2xs pt-space-2xs">
               Secure payment
             </p>
             <img class="pl-space-2xs pt-space-3xs" src={Lock} alt="lock" />
           </div>
-          <label for="billingadd">billing address*</label>
+          <label for="billingadd">Billing address*</label>
 
-          <div class="flex pl-space-2xs pt-space-2xs">
+          <div class="flex">
             <input
               class="regular-checkbox"
               type="checkbox"
@@ -253,15 +283,15 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             </p>
           </div>
         </div>
-        <div class="grid place-content-center lg:place-content-start">
+        <div class="grid place-content-center md:place-content-start">
           <input type="submit" value="Continue" class="btn continue-two" />
         </div>
       </form>
     </section>
 
-    <section class="px-body-padding-x pb-20 lg:grid lg:grid-cols-3">
+    <section class="px-body-padding-x pb-20 md:grid md:grid-cols-3">
       <div
-        class="details flex justify-between border-b-2 border-line-checkout lg:col-span-2"
+        class="details flex justify-between border-b-2 border-line-checkout md:col-span-2"
       >
         <h4>3. Review and order</h4>
         <img class="cursor-pointer plus3" src={Plus} alt="plus" />
@@ -298,7 +328,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
           </div>
         </div>
         <div
-          class="grid place-content-center pt-space-xl-2xl lg:place-content-start"
+          class="grid place-content-center pt-space-xl-2xl md:place-content-start"
         >
           <Button2 text="place order" link="/complete/" />
         </div>
@@ -314,11 +344,11 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
         display: none;
       }
     }
-    @media screen and (min-width: 1024px) {
+    /*@media screen and (min-width: 1024px) {
       .exp-wrapper {
-        width: 80%;
+        width: 40%;
       }
-    }
+    }*/
     .navigation {
       letter-spacing: var(--letter-spacing-button);
       line-height: var(--line-height-button);
@@ -399,8 +429,8 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
     }
     label {
       font-family: var(--heading-proxima-nova);
-      font-size: var(--font-size-h6);
-      text-transform: uppercase;
+      font-size: var(--font-size-body-btn);
+
       color: var(--form-inputandlabel);
       padding-bottom: var(--space-3xs);
       padding-top: var(--space-s);
