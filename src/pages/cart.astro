@@ -5,7 +5,7 @@ import Footer from "../components/Footer.astro";
 import BurgerMenu from "../components/BurgerMenu.astro";
 import Button1 from "../components/Button1.astro";
 import WineImg from "../img/red.webp";
-import WineImgTwo from "../img/white.webp";
+
 import Close from "../svg/icons/close.svg";
 import Delux from "../img/wine-subscription/winebox1.webp";
 ---
@@ -65,7 +65,7 @@ import Delux from "../img/wine-subscription/winebox1.webp";
         />
         <div class="flex flex-col justify-between p-space-xs">
           <div class="flex flex-row justify-between">
-            <h6>The delux</h6>
+            <h6>The deluxe</h6>
             <div>
               <img class="close cursor-pointer" src={Close} alt="close" />
             </div>
@@ -89,11 +89,16 @@ import Delux from "../img/wine-subscription/winebox1.webp";
         </div>
       </div>
       <div class="pt-space-l pb-space-xs">
-        <input class="addnote" type="text" placeholder="ADD A NOTE" />
+        <label for="note" class="note"> Add a note</label>
+        <input
+          class="addnote"
+          type="text"
+          placeholder="Add any eventual notes here"
+        />
       </div>
     </section>
     <section
-      class="pt-space-m lg:pl-space-xs lg:row-start-1 lg:col-start-3 lg:pt-[600px]"
+      class="pt-space-m lg:pl-space-xs lg:row-start-1 lg:col-start-3 lg:pt-[650px]"
     >
       <h4>shipping</h4>
       <p class="pt-space-xs">
@@ -134,9 +139,10 @@ import Delux from "../img/wine-subscription/winebox1.webp";
       </div>
 
       <div
-        class="flex pt-space-l border-b-2 border-line-checkout pb-space-m lg:pb-space-m lg:pt-space-xl"
+        class="flex border-b-2 border-line-checkout pb-space-m lg:pb-space-m lg:pt-space-3xl pt-space-l"
       >
-        <input class="promo" type="text" placeholder="ADD PROMO CODE" />
+        <input class="promo" type="text" placeholder="Add promo code" />
+
         <div
           class="border-y-2 border-r-2 bg-button-gray hover:bg-white border-line-checkout px-space-m grid place-content-center cursor-pointer"
         >
@@ -183,5 +189,14 @@ import Delux from "../img/wine-subscription/winebox1.webp";
     font-size: var(--font-size-body);
     padding: var(--space-xs);
     width: 100%;
+  }
+
+  .note {
+    font-family: var(--heading-proxima-nova);
+    font-size: var(--font-size-body-btn);
+
+    text-transform: uppercase;
+    padding-bottom: var(--space-3xs);
+    padding-top: var(--space-s);
   }
 </style>
