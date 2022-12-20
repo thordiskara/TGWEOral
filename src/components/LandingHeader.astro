@@ -27,10 +27,10 @@ import BurgerMenu from './BurgerMenu.astro'
         <div class="pl-[2rem]">
             <nav>
                 <ul class="flex gap-10">
-                    <li><a class="navigation" href="/productlist/">Shop</a></li>
-                    <li><a class="navigation"  href="/winetastings/">Wine Tastings</a></li>
-                    <li><a class="navigation"  href="/winesubscriptions/">Wine Subscription</a></li>
-                    <li><a class="navigation"  href="/about/">About</a></li>
+                    <li><a class="navigation fine-line" href="/productlist/">Shop</a></li>
+                    <li><a class="navigation fine-line"  href="/winetastings/">Wine Tastings</a></li>
+                    <li><a class="navigation fine-line"  href="/winesubscriptions/">Wine Subscription</a></li>
+                    <li><a class="navigation fine-line"  href="/about/">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -79,23 +79,34 @@ import BurgerMenu from './BurgerMenu.astro'
     font-size: var(--font-size-body-btn);
 }
 
-nav a:hover,
-.language a:hover{
-    border-bottom: var(--color-accent-red-500) 2px solid;
-    transition: 100ms ease-in-out;
-}
+    .fine-line{
+        position: relative;
+    }
+    .fine-line:hover:after{
+        transition: 400ms ease-in-out;
+        transform: scaleX(1);
+        transform-origin: bottom center;
+    }
 
-.language a:hover{
-    border-bottom: var(--color-accent-red-500) 2px solid;
-}
-
+    .fine-line:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: var(--color-accent-red-500);
+    }
 .language{
     color:var(--color-accent-red-500);
     z-index:100;
     cursor:pointer;
 }
 
-.language a:active{
-    border-bottom: var(--color-accent-red-500) 2px solid;
+.language a:hover{
+    border-bottom: solid 2px var(--color-accent-red-500);
+    transition: 150ms ease-in-out;
 }
+
 </style>
