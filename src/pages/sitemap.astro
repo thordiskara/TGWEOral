@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro"
+---
+<Layout>
+    <Header />
+<div class="px-body-padding-x py-body-padding-y">
+    <h1 class="pb-space-l">Sitemap</h1>
+    <div class="block md:grid md:grid-cols-2 ">
+        <div class="flex flex-col gap-space-xs">
+            <a class="pb-space-s" href="/index/"><h3>Home</h3></a>
+    
+            <a href="/productlist/"><h3>Shop</h3></a>
+            <a href="/redwine/"><h5>Red Wine</h5></a>
+            <a href="/whitewine/"><h5>White Wine</h5></a>
+            <a href="/rosewine/"><h5>Rosé Wine</h5></a>
+            <a class="pb-space-s" href="/sparkilngwine/"><h5>Sparkling Wine</h5></a>
+
+            <a href="/winetastings/"><h3>Wine Tastings</h3></a>
+            <a class="pb-space-s" href="/individualtasting/"><h5>DELUXE BUBBLES AND CAKE EXPERIENCE</h5></a>
+        </div>
+
+        <div class="flex flex-col gap-space-xs">
+            
+            <a href="/winesubscriptions/"><h3>Wine Subscription</h3></a>
+            <a class="pb-space-s" href="/subscriptionbox/"><h5>The Deluxe</h5></a>
+    
+            <a class="pb-space-s" href="/about/"><h3>About</h3></a>
+    
+            <a href="/cart/"><h3>Cart</h3></a>
+            <a href="/checkout/"><h5>Checkout</h5></a>
+            <a href="/complete/"><h5>Order Complete</h5></a>
+        </div>
+        
+    </div>
+
+</div>
+</Layout>
+
+<style>
+    a:hover{
+        color: var(--color-primary-button-blue);
+        
+    }
+</style>
