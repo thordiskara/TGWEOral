@@ -10,24 +10,27 @@ import Search from '../svg/header-icons/search.svg'
         <div class="burgercard grid-cols-burger-grid grid items-end top-0 absolute w-full z-[100]">
     
     
-            <div class="flex gap-10 border-b-2 border-r-2 border-accent-red-main pt-16 pb-burger-padding px-header-x">
+            <div class="flex gap-10 border-b-2 border-r-2 border-accent-red-border pt-16 pb-burger-padding px-header-x">
                 <img src={Search} alt="search"/>
-                <label class="hidden" for="Searchbar">Search</label>
-                <input class="bg-burger-blue w-5/6 border-0" type="text" placeholder="Search.."></div>
+                <form>
+                    <label class="hidden" for="searchbar">Search</label>
+                    <input class="bg-burger-blue w-5/6 border-0" type="text" id="searchbar" placeholder="Search.." name="searchbar">
+                </form>
+            </div>
     
-            <div class="border-b-2 border-accent-red-main h-full flex justify-center items-center cursor-pointer"><img class="close" src={Close} alt="close"/></div>
+            <div class="border-b-2 border-accent-red-border h-full flex justify-center items-center cursor-pointer"><img class="close" src={Close} alt="close"/></div>
      
-            <a class="border-b-2 border-r-2 border-accent-red-main py-burger-padding px-header-x" href="/productlist/"><h5>Shop</h5></a>
+            <a class="border-b-2 border-r-2 border-accent-red-border py-burger-padding px-header-x" href="/productlist/"><h5>Shop</h5></a>
     
-            <div class="row-span-2 border-b-2 border-accent-red-main h-full flex justify-center items-center"><img src={User} alt="user"/></div>
+            <div class="row-span-2 border-b-2 border-accent-red-border h-full flex justify-center items-center"><img src={User} alt="user"/></div>
     
-            <a class="border-b-2 border-r-2 border-accent-red-main py-burger-padding px-header-x" href="/winetastings/"><h5>Wine Tastings</h5></a>
+            <a class="border-b-2 border-r-2 border-accent-red-border py-burger-padding px-header-x" href="/winetastings/"><h5>Wine Tastings</h5></a>
     
-            <a class="border-b-2 border-r-2 border-accent-red-main py-burger-padding px-header-x" href="/winesubscriptions/"><h5>Wine Subscription</h5></a>
+            <a class="border-b-2 border-r-2 border-accent-red-border py-burger-padding px-header-x" href="/winesubscriptions/"><h5>Wine Subscription</h5></a>
     
-            <div class="row-span-2 border-b-2 border-accent-red-main h-full flex justify-center items-center "><a href="/cart/"><img src={Cart} alt="cart"/></a></div>
+            <div class="row-span-2 border-b-2 border-accent-red-border h-full flex justify-center items-center "><a href="/cart/"><img src={Cart} alt="cart"/></a></div>
     
-            <a class="border-b-2 border-r-2 border-accent-red-main py-burger-padding px-header-x" href="/about/"><h5>About</h5></a>
+            <a class="border-b-2 border-r-2 border-accent-red-border py-burger-padding px-header-x" href="/about/"><h5>About</h5></a>
         </div>
 
     </div>  
@@ -35,7 +38,7 @@ import Search from '../svg/header-icons/search.svg'
 <style>
     .burgercard{
         background-color:var(--color-accent-blue-100);
-        color: var(--color-accent-red-600);
+        color: var(--color-accent-red-700);
     }
 
     input{
