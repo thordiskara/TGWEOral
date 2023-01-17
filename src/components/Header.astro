@@ -36,14 +36,16 @@ import BurgerMenu from './BurgerMenu.astro'
     
         <div class="header-icons flex gap-4">
             
-            <img class="w-[1.375rem] serchbar cursor-pointer " src={Search} alt="search"/>
+            <img class="w-[1.375rem] searchbar cursor-pointer " src={Search} alt="search"/>
             <img class="w-[2.5rem]" src={User} alt="user"/>
             <a class="flex" href="/cart/"><img class="w-[1.875rem]" src={Cart} alt="cart"/></a>
         </div>
        
     </div>
+
+
    <div class="hidden lg:flex justify-end pr-header-x">
-        <form id="serch" class="" action="/action_page.php">
+        <form id="search" class="invisible" action="/action_page.php">
             <label class="hidden" for="search"> Search</label>
             <input class="border-b-2 border-accent-red-border w-[200px] text-accent-red-border" type="text" placeholder="Search.." name="search" id="search">
           </form>
@@ -67,6 +69,8 @@ import BurgerMenu from './BurgerMenu.astro'
 <script is:inline>
 
     document.addEventListener("DOMContentLoaded", init)
+    document.querySelector('.searchbar').addEventListener("click", searchbar)
+
     
     
     function init(){
@@ -77,9 +81,18 @@ import BurgerMenu from './BurgerMenu.astro'
                 document.querySelector('.burgerbox').classList.add('hidden');
               })
           });
-      }   
+      } 
       
-    
+      function searchbar() {
+  var x = document.getElementById("search");
+  if (x.style.visibility === "visible") {
+    x.style.visibility = "hidden";
+  } else {
+    x.style.visibility = "visible";
+  }
+
+}
+      
 
 
         </script>
@@ -88,6 +101,11 @@ import BurgerMenu from './BurgerMenu.astro'
 input:focus {
     outline: none;
 
+}
+
+#search input[type=text] {
+  border-bottom: 2px solid var(--color-accent-red-700);
+  color:var(--color-accent-red-700);
 }
     a{
     color:var(--color-accent-red-700);
@@ -133,7 +151,5 @@ a{
     cursor: pointer;
 }
 
-.hide{
-    display: none;
-}
+
 </style>
