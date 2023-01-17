@@ -18,7 +18,7 @@ import BurgerMenu from './BurgerMenu.astro'
         <a href="">Da</a>
     </div>
 
-    <div class="desktop-header hidden lg:flex lg:justify-between lg:w-full lg:items-center px-header-x py-header-y">
+    <div class="desktop-header hidden lg:flex lg:justify-between lg:w-full lg:items-center px-header-x pt-header-y">
         <div class="pr-20">
             <a href="/"><img src={Logo} alt="logo"/></a>
         </div>
@@ -35,11 +35,19 @@ import BurgerMenu from './BurgerMenu.astro'
         </div>
     
         <div class="header-icons flex gap-4">
-            <img class="w-[1.375rem]" src={Search} alt="search"/>
+            
+            <img class="w-[1.375rem] serchbar cursor-pointer " src={Search} alt="search"/>
             <img class="w-[2.5rem]" src={User} alt="user"/>
             <a class="flex" href="/cart/"><img class="w-[1.875rem]" src={Cart} alt="cart"/></a>
         </div>
+       
     </div>
+   <div class="hidden lg:flex justify-end pr-header-x">
+        <form id="serch" class="" action="/action_page.php">
+            <label class="hidden" for="search"> Search</label>
+            <input class="border-b-2 border-accent-red-border w-[200px] text-accent-red-border" type="text" placeholder="Search.." name="search" id="search">
+          </form>
+   </div>
 
 
     <div class="relative">
@@ -60,6 +68,7 @@ import BurgerMenu from './BurgerMenu.astro'
 
     document.addEventListener("DOMContentLoaded", init)
     
+    
     function init(){
         console.log("hee")
         document.querySelector('.hamburger').addEventListener('click', () => {
@@ -69,9 +78,17 @@ import BurgerMenu from './BurgerMenu.astro'
               })
           });
       }   
+      
+    
+
+
         </script>
 
 <style>
+input:focus {
+    outline: none;
+
+}
     a{
     color:var(--color-accent-red-500);
     text-transform: uppercase;
@@ -114,5 +131,9 @@ import BurgerMenu from './BurgerMenu.astro'
 
 a{
     cursor: pointer;
+}
+
+.hide{
+    display: none;
 }
 </style>
