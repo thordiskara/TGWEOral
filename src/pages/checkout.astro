@@ -47,12 +47,12 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
         checkout
       </h1>
 
-      <aside class="md:col-start-3 lg:pl-10 md:pl-space-xs">
-        <h5 class="pt-space-m-l pb-space-review-order md:pt-space-xl md:pb-1">
+      <aside class="md:col-start-3 lg:pl-10 md:pl-space-xs details">
+        <h5 class=" pb-space-m">
           order summary
         </h5>
         <div
-          class="border-t-2 border-line-checkout flex pt-space-m-l pb-space-review-order justify-between"
+          class="border-t-2 border-line-checkout flex py-space-review-order justify-between"
         >
           <p>Mompirone Barbera d’Ast</p>
           <h6>200 DKK</h6>
@@ -75,9 +75,9 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
       </aside>
       <div class="md:col-span-2 md:row-start-2">
         <div
-          class="details flex justify-between border-b-2 border-line-checkout"
+          class="details flex justify-between border-b-2 border-line-checkout pb-space-m"
         >
-          <h4 class="">1. shipping details</h4>
+          <h4>1. shipping details</h4>
           <img class="minus cursor-pointer" src={Minus} alt="minus" />
           <img class="plus hidden cursor-pointer" src={Plus} alt="plus" />
         </div>
@@ -91,18 +91,20 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
           <div class="grid">
             <div class="md:grid md:grid-cols-2 gap-4">
               <div class="flex flex-col">
-                <label for="Fname"> First name*</label>
+                <label for="firstname"> First name*</label>
                 <input
                   type="text"
+                  id="firstname"
                   name="firstname"
                   placeholder="Please enter first name"
                   required
                 />
               </div>
               <div class="flex flex-col">
-                <label for="Lname"> Last name*</label>
+                <label for="lastname"> Last name*</label>
                 <input
                   type="text"
+                  id="lastname"
                   name="lastname"
                   placeholder="Please enter last name"
                   required
@@ -114,6 +116,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
               <label for="email"> E-mail*</label>
               <input
                 type="text"
+                id="email"
                 name="email"
                 placeholder="Example@email.dk"
                 required
@@ -125,6 +128,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
               <input
                 type="tel"
                 name="phone"
+                id="phone"
                 placeholder="+45 00 00 00"
                 class="lg:w-[50%]"
               />
@@ -133,14 +137,16 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             <label for="address">Address*</label>
             <input
               type="text"
-              name="adress"
+              id="address"
+              name="address"
               placeholder="Home address"
               class="lg:w-[50%]"
             />
-            <label for="address"> Second address (optional)</label>
+            <label for="secondaddress"> Second address (optional)</label>
             <input
               type="text"
-              name="adress"
+              id="secondaddress"
+              name="secondaddress"
               placeholder="Floor, Apartment, etc."
               class="lg:w-[50%]"
             />
@@ -149,14 +155,16 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
                 <label for="city">City*</label>
                 <input
                   type="text"
+                  id="city"
                   name="city"
                   placeholder="Please enter your city"
                 />
               </div>
               <div class="flex flex-col">
-                <label for="postecode">Postcode*</label>
+                <label for="postcode">Postcode*</label>
                 <input
                   type="text"
+                  id="postcode"
                   name="postcode"
                   pattern="[0-9]{4}"
                   maxlength="4"
@@ -170,6 +178,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
                 <label for="region">Region*</label>
                 <input
                   type="text"
+                  id="region"
                   name="region"
                   placeholder="Please enter your region"
                 />
@@ -178,6 +187,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
                 <label for="country">Country</label>
                 <input
                   type="text"
+                  id="country"
                   name="country"
                   disabled
                   placeholder="Denmark"
@@ -199,7 +209,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
       <div
         class="details flex justify-between border-b-2 border-line-checkout md:col-span-2"
       >
-        <h4 class="">2. payment</h4>
+        <h4 class="pb-space-m">2. payment</h4>
         <img class="plus2 cursor-pointer" src={Plus} alt="plus" />
         <img class="minus2 hidden cursor-pointer" src={Minus} alt="minus" />
       </div>
@@ -212,6 +222,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
           <label for="card">Card number*</label>
           <input
             type="text"
+            id="card"
             name="card"
             maxlength="19"
             inputmode="numeric"
@@ -225,7 +236,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             <input
               autocomplete="off"
               class="exp w-[20%]"
-              id="month"
+              id="expdate"
               maxlength="2"
               pattern="[0-9]*"
               inputmode="numeric"
@@ -236,7 +247,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             <input
               autocomplete="off"
               class="exp w-[20%]"
-              id="year"
+              id="expdate"
               maxlength="2"
               pattern="[0-9]*"
               inputmode="numeric"
@@ -246,19 +257,21 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
             />
           </div>
 
-          <label for="ccv">ccv*</label>
+          <label for="ccv">CCV*</label>
           <input
             type="text"
-            name="CCV"
+            id="ccv"
+            name="ccv"
             placeholder="CCV"
             maxlength="3"
             pattern="[0-9]*"
             required
             class="w-[60%] lg:w-[40%]"
           />
-          <label for="name">Name on card*</label>
+          <label for="nameOnCard">Name on card*</label>
           <input
             type="text"
+            id="nameOnCard"
             name="name"
             placeholder="Enter cardholder name"
             class="lg:w-[60%]"
@@ -276,7 +289,8 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
               class="regular-checkbox"
               type="checkbox"
               checked="checked"
-              name="sameadr"
+              id="billingadd"
+              name="billingadd"
             />
             <p class="text-form-inputandlabel pl-3">
               Shipping address same as billing
@@ -293,7 +307,7 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
       <div
         class="details flex justify-between border-b-2 border-line-checkout md:col-span-2"
       >
-        <h4>3. Review and order</h4>
+        <h4 class="pb-space-m">3. Review and order</h4>
         <img class="cursor-pointer plus3" src={Plus} alt="plus" />
         <img class="minus3 hidden cursor-pointer" src={Minus} alt="minus" />
       </div>
@@ -443,7 +457,9 @@ import LogoMobile from "../svg/logo/logo-mobile.svg";
     }
     input:focus {
       outline: none;
+      border-color: var(--color-primary-button-blue);
     }
+    
     .details {
       padding-top: var(--space-xl);
     }

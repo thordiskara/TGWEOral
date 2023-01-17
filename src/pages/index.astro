@@ -119,11 +119,11 @@ import Cookiebox from "../components/Cookiebox.astro"
             <div class="py-landing-padding-y flex flex-col gap-space-l">
                     <div class="flex flex-col gap-space-3xs">
                         <label for="fullname"><p>Full Name</p></label>
-                        <input type="text" name="fullname" placeholder="Please enter your full name" required class="border border-display-blue p-space-xs text-body-small">
+                        <input type="text" id="fullname" name="fullname" placeholder="Please enter your full name" required class="border border-display-blue p-space-xs text-body-small">
                     </div>
                     <div class="flex flex-col gap-space-3xs">
                         <label for="email"><p>Email</p></label>
-                        <input type="text" name="email" placeholder="example@mail.com" required class="border border-display-blue p-space-xs text-body-small">
+                        <input type="text" id="email" name="email" placeholder="example@mail.com" required class="border border-display-blue p-space-xs text-body-small">
                     </div>
             </div>
                 <button type="submit" class="btn justify-self-center mx-16 md:mx-20">Join now</button>
@@ -138,7 +138,7 @@ import Cookiebox from "../components/Cookiebox.astro"
 
 <style>
 .wineSub{
-    background-image: url("../images-wine/bg-winesubscription.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23)), url("../images-wine/bg-winesubscription.webp");
     background-size: cover;
 }
 .hoverLink {

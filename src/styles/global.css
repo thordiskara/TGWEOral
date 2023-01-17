@@ -25,7 +25,7 @@
     /* BUTTON COLORS */
     --color-button-dark-grey: #303030;
     --color-primary-button-grey: #f3f3f3;
-    --color-primary-button-blue: #438ee7;
+    --color-primary-button-blue: var(  --color-accent-blue-700);
   
     /* ACCENT RED COLORS */
     --color-accent-red-900: #7e211e;

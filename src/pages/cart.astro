@@ -5,9 +5,8 @@ import Footer from "../components/Footer.astro";
 import BurgerMenu from "../components/BurgerMenu.astro";
 import Button1 from "../components/Button1.astro";
 import WineImg from "../img/red.webp";
-
+import  Sparkling from "../img/sparkling.webp";
 import Close from "../svg/icons/close.svg";
-import Delux from "../img/wine-subscription/winebox1.webp";
 ---
 
 <Layout>
@@ -23,76 +22,60 @@ import Delux from "../img/wine-subscription/winebox1.webp";
     <section class="lg:col-span-2 lg:pr-space-2xl">
       <h5 class="border-b-2 border-line-checkout pb-space-2xs">cart (2)</h5>
       <div
-        class="grid grid-cols-2 border-b-2 border-line-checkout py-space-m-l"
-      >
-        <img
-          class="w-[8rem] h-[14rem] object-contain p-space-xs"
-          src={WineImg}
-          alt="red wine"
-        />
-        <div class="flex flex-col justify-between p-space-xs">
-          <div class="flex flex-row justify-between">
-            <h6>Galia jacquet</h6>
-            <div>
-              <img class="closeTwo cursor-pointer" src={Close} alt="close" />
-            </div>
+      class="flex  border-b-2 border-line-checkout py-space-m-l justify-between">
+          <img
+            class="w-[8rem] h-[14rem] object-contain p-space-xs"
+            src={WineImg}
+            alt="Red Wine"/>
+      <div class="flex flex-col md:flex-row md:justify-between md:gap-28">
+          <h6 class="pt-space-s">Galia Villages</h6>
+          <div class="flex flex-col gap-1 pt-space-s ">
+            <label for="quantity" class="md:self-center">QTY</label>
+            <input
+              type="number"
+              min="1"
+              id="quantity"
+              name="quantity"
+              value="1"
+              inputmode="numeric"
+              class="text-black p-2 md:p-3 w-16 text-center border border-black"
+            />
           </div>
-          <div class="lg:flex lg:flex-row lg:justify-between">
-            <div class="flex flex-col gap-1">
-              <label for="qty">QTY</label>
-              <input
-                type="number"
-                min="1"
-                name="quantity"
-                value="1"
-                inputmode="numeric"
-                class="text-black p-2 md:p-3 w-16 text-center border border-black"
-              />
-            </div>
-            <div class="lg:flex lg:items-end">
-              <h6 class="pt-space-xs">200 dkk</h6>
-            </div>
-          </div>
-        </div>
+          <h6 class="pt-space-s">200 dkk</h6>
       </div>
+        <img class="close cursor-pointer self-start p-space-s" src={Close} alt="close" />
+    </div>
       <div
-        class="grid grid-cols-2 border-b-2 border-line-checkout py-space-m-l"
-      >
-        <img
-          class="h-[14rem] w- object-contain p-space-xs pr-space-m"
-          src={Delux}
-          alt="red wine"
-        />
-        <div class="flex flex-col justify-between p-space-xs">
-          <div class="flex flex-row justify-between">
-            <h6>The deluxe</h6>
-            <div>
-              <img class="close cursor-pointer" src={Close} alt="close" />
-            </div>
-          </div>
-          <div class="lg:flex lg:flex-row lg:justify-between">
-            <div class="flex flex-col gap-1">
-              <label for="qty">QTY</label>
+        class="flex  border-b-2 border-line-checkout py-space-m-l justify-between">
+            <img
+              class="w-[8rem] h-[14rem] object-contain p-space-xs"
+              src={Sparkling}
+              alt="Sparkling Wine"/>
+        <div class="flex flex-col md:flex-row md:justify-between md:gap-28">
+            <h6 class="pt-space-s">SELEZIONE DI PIERA</h6>
+            <div class="flex flex-col gap-1 pt-space-s ">
+              <label for="quantity2" class="md:self-center">QTY</label>
               <input
                 type="number"
                 min="1"
+                id="quantity2"
                 name="quantity"
                 value="1"
                 inputmode="numeric"
                 class="text-black p-2 md:p-3 w-16 text-center border border-black"
               />
             </div>
-            <div class="lg:flex lg:items-end">
-              <h6 class="pt-space-xs">895 dkk</h6>
-            </div>
-          </div>
+            <h6 class="pt-space-s">215 dkk</h6>
         </div>
+          <img class="close cursor-pointer self-start p-space-s" src={Close} alt="close" />
       </div>
       <div class="pt-space-l pb-space-xs">
-        <label for="note" class="note"> Add a note</label>
+        <label for="note" class="note">Add a note</label>
         <input
           class="addnote"
           type="text"
+          id="note"
+          name="note"
           placeholder="Add any eventual notes here"
         />
       </div>
@@ -122,32 +105,29 @@ import Delux from "../img/wine-subscription/winebox1.webp";
       </h5>
       <div class="flex flex-row justify-between pt-space-l">
         <h6>order value</h6>
-        <h6>1095 dkk</h6>
+        <h6>415 dkk</h6>
       </div>
       <div class="flex flex-row justify-between pt-space-m">
         <form action="" class="flex flex-col">
-          <label class="pb-space-3xs text-size-h6">SHIPPING</label>
+          <label for="shipping" class="pb-space-3xs text-size-h6">SHIPPING</label>
           <select
             name="shipping"
+            id="shipping"
             class="border-b-[1px] pr-1 border-black cursor-pointer"
           >
             <option value="standard">STANDARD SHIPPING</option>
             <option value="clickandcollect">CLICK AND COLLECT</option>
           </select>
         </form>
-        <div class="flex items-end"><h6>Free</h6></div>
+        <div class="flex items-end"><h6>59 dkk</h6></div>
       </div>
 
       <div
         class="flex border-b-2 border-line-checkout pb-space-m lg:pb-space-m lg:pt-space-3xl pt-space-l"
       >
-        <input class="promo" type="text" placeholder="Add promo code" />
-
-        <div
-          class="border-y-2 border-r-2 bg-button-gray hover:bg-white border-line-checkout px-space-m grid place-content-center cursor-pointer"
-        >
-          <h6>APPLY</h6>
-        </div>
+      <label for="promocode" class="hidden">Promo code</label>
+        <input class="promo"  id="promocode" name="promocode"  type="text" placeholder="Add promo code" />
+        <button class="bg-button-dark text-white uppercase btn">apply</button>
       </div>
       <div class="flex flex-row justify-between pt-space-xs">
         <div>
@@ -155,7 +135,7 @@ import Delux from "../img/wine-subscription/winebox1.webp";
           <p class="text-gray-500">INC. TAX</p>
         </div>
 
-        <h6>1095 dkk</h6>
+        <h6>474 dkk</h6>
       </div>
       <div
         class="pt-space-xl pb-space-l grid justify-center lg:border-b-2 lg:border-line-checkout"
@@ -183,12 +163,24 @@ import Delux from "../img/wine-subscription/winebox1.webp";
     padding: var(--space-l);
     width: 100%;
   }
+
+  input:focus{
+        border-color: var(--color-primary-button-blue);
+    }
+
   .promo {
     border: solid 2px;
     border-color: var(--color-accent-blue-500);
     font-size: var(--font-size-body);
     padding: var(--space-xs);
     width: 100%;
+  }
+  button{
+    padding: var(--secondary-btn-x-padding) var(--secondary-btn-y-padding);
+  }
+  button:hover{
+    background-color: var(--color-black);
+        transition: 0.4s ease-in-out;
   }
 
   .note {
