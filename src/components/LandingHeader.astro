@@ -18,7 +18,7 @@ import BurgerMenu from './BurgerMenu.astro'
         <a href="">Da</a>
     </div>
 
-    <div class="desktop-header hidden lg:flex lg:justify-between lg:w-full lg:items-center px-header-x py-header-y absolute">
+    <div class="desktop-header hidden lg:flex lg:justify-between lg:w-full lg:items-center px-header-x pt-header-y absolute">
         <div class="pr-20">
             <a href="/"><img src={Logo} alt="logo"/></a>
         </div>
@@ -35,11 +35,20 @@ import BurgerMenu from './BurgerMenu.astro'
         </div>
     
         <div class="header-icons flex gap-4">
-            <img class="w-[1.375rem] searchbar" src={Search} alt="search"/>
+            <img class="w-[1.375rem] searchbar cursor-pointer" src={Search} alt="search"/>
             <img class="w-[2.5rem]" src={User} alt="user"/>
             <a class="flex" href="/cart/"><img class="w-[1.875rem]" src={Cart} alt="cart"/></a>
         </div>
     </div>
+
+    <div class="hidden lg:flex justify-end pr-header-x">
+        <form id="search" class="invisible absolute top-[8rem]" action="/action_page.php">
+            <label class="hidden" for="search"> Search</label>
+            <input class="border-b-2 border-accent-red-border w-[200px] text-accent-red-border" type="text" placeholder="Search.." name="search" id="search">
+          </form>
+   </div>
+   
+
 
 
     <div class="relative">
@@ -91,9 +100,15 @@ import BurgerMenu from './BurgerMenu.astro'
     font-size: var(--font-size-body-btn);
 }
 
+input:focus {
+    outline: none;
+
+}
+
 #search input[type=text] {
   border-bottom: 2px solid var(--color-accent-red-700);
   color:var(--color-accent-red-700);
+  background: rgba(255, 255, 255, 0);
 }
 
     .fine-line{
