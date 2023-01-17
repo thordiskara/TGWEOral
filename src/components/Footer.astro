@@ -31,11 +31,11 @@ import Pinterest from "../svg/social/pinterest.svg";
     <div class="pb-footer-gaps">
       <h6 class="pb-footer-h6-pb">Links</h6>
       <ul class="flex flex-col gap-[1.3rem]">
-        <li><a class="footer-links" href="">Shipping & Returns</a></li>
-        <li><a class="footer-links" href="">Terms & Conditions</a></li>
-        <li><a class="footer-links" href="">Payment Methods</a></li>
-        <li><a class="footer-links" href="/privacy.astro/">Privacy Policy</a></li>
-        <li><a class="footer-links" href="/sitemap.astro/">Sitemap</a></li>
+        <li><a class="fine-line" href="">Shipping & Returns</a></li>
+        <li><a class="fine-line" href="">Terms & Conditions</a></li>
+        <li><a class="fine-line" href="">Payment Methods</a></li>
+        <li><a class="fine-line" href="/privacy/">Privacy Policy</a></li>
+        <li><a class="fine-line" href="/sitemap/">Sitemap</a></li>
       </ul>
     </div>
 
@@ -81,11 +81,11 @@ import Pinterest from "../svg/social/pinterest.svg";
     <div class="pb-footer-gaps">
       <h6 class="pb-footer-h6-pb">Links</h6>
       <ul class="flex flex-col gap-[1.3rem]">
-        <li><a class="footer-links" href="">Shipping & Returns</a></li>
-        <li><a class="footer-links" href="">Terms & Conditions</a></li>
-        <li><a class="footer-links" href="">Payment Methods</a></li>
-        <li><a class="footer-links" href="">Privacy Policy</a></li>
-        <li><a class="footer-links" href="">Sitemap</a></li>
+        <li><a class="fine-line" href="">Shipping & Returns</a></li>
+        <li><a class="fine-line" href="">Terms & Conditions</a></li>
+        <li><a class="fine-line" href="">Payment Methods</a></li>
+        <li><a class="fine-line" href="/privacy/">Privacy Policy</a></li>
+        <li><a class="fine-line" href="/sitemap/">Sitemap</a></li>
       </ul>
     </div>
 
@@ -116,7 +116,23 @@ import Pinterest from "../svg/social/pinterest.svg";
 </footer>
 
 <style>
-  .footer-links:hover {
-    border-bottom: white 2px solid;
-  }
+  .fine-line{
+        position: relative;
+    }
+    .fine-line:hover:after{
+        transition: 400ms ease-in-out;
+        transform: scaleX(1);
+        transform-origin: bottom center;
+    }
+
+    .fine-line:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: white;
+    }
 </style>
