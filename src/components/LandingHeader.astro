@@ -42,9 +42,9 @@ import BurgerMenu from './BurgerMenu.astro'
     </div>
 
     <div class="hidden lg:flex justify-end pr-header-x">
-        <form id="search" class="invisible absolute top-[8rem]" action="/action_page.php">
-            <label class="hidden" for="search"> Search</label>
-            <input class="border-b-2 border-accent-red-border w-[200px] text-accent-red-border" type="text" placeholder="Search.." name="search" id="search">
+        <form id="searchlanding" class="invisible absolute top-[8rem]" action="/action_page.php">
+            <label class="hidden" for="searchlanding"> Search</label>
+            <input class="border-b-2 border-accent-red-border w-[200px] text-accent-red-border" type="text" placeholder="Search.." name="searchlanding" id="searchlanding">
           </form>
    </div>
    
@@ -83,7 +83,7 @@ import BurgerMenu from './BurgerMenu.astro'
       }   
 
       function searchbar() {
-  var x = document.getElementById("search");
+  var x = document.getElementById("searchlanding");
   if (x.style.visibility === "visible") {
     x.style.visibility = "hidden";
   } else {
@@ -105,7 +105,7 @@ input:focus {
 
 }
 
-#search input[type=text] {
+#searchlanding input[type=text] {
   border-bottom: 2px solid var(--color-accent-red-700);
   color:var(--color-accent-red-700);
   background: rgba(255, 255, 255, 0);
