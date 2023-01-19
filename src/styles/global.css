@@ -153,6 +153,7 @@
     --breadcrumbs-padding-x:var(--space-s-2xl);
     --breadcrumbs-padding-y: var(--space-m-l);
     --body-padding-y: var(--space-2xl-3xl);
+    --header-red: var(--color-accent-red-700);
   
   
       /* CUSTOM SPACING */
